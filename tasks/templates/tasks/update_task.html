@@ -1,0 +1,12 @@
+{% extends 'tasks/index.html' %}
+{% block content %}
+<div class="container">
+    <h3>Update task</h3>
+
+    <form method="POST" action="/" class="update-form">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" name="update-task" value="Update Task">
+    </form>
+</div>
+{% endblock %}

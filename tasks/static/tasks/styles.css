@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+form input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #ecf0f1;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    width: 18%;
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Task List */
+.task {
+    background-color: #ecf0f1;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.task a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #3498db;
+    font-size: 14px;
+}
+
+.task a:hover {
+    color: #2980b9;
+}
+
+/* Completed Task */
+.task.completed p {
+    text-decoration: line-through;
+    color: #95a5a6;
+}
+
+.task.completed {
+    background-color: #bdc3c7;
+}
+
+/* Update Task Form */
+form.update-form {
+    display: flex;
+    flex-direction: column;
+}
+
+form.update-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ecf0f1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+form.update-form input[type="submit"] {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form.update-form input[type="submit"]:hover {
+    background-color: #2ecc71;
+}
+
+/* Delete Confirmation */
+.delete-confirmation {
+    text-align: center;
+}
+
+.delete-confirmation p {
+    font-size: 18px;
+}
+
+.delete-confirmation a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #e74c3c;
+    font-size: 14px;
+}
+
+.delete-confirmation a:hover {
+    color: #c0392b;
+}
+
+form.delete-form input[type="submit"] {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form.delete-form input[type="submit"]:hover {
+    background-color: #c0392b;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    form input[type="submit"] {
+        width: 100%;
+    }
+
+    .task {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task a {
+        margin: 5px 0;
+    }
+}

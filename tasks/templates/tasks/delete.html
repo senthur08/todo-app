@@ -1,0 +1,12 @@
+{% extends 'tasks/index.html' %}
+{% block content %}
+<div class="container delete-confirmation">
+    <p>Are you sure you want to delete '{{ task }}'?</p>
+    <a href="{% url 'todo-index' %}">Cancel</a>
+
+    <form method="POST" action="" class="delete-form">
+        {% csrf_token %}
+        <input type="submit" name="delete" value="Delete">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'tasks/index.html' %}
+
+{% block content %}
+<div class="container">
+    <form method="POST" action="/">
+        {% csrf_token %}
+        {{ form.title }}
+        <input type="submit" name="Create-new" value="Create Task">
+    </form>
+
+    {% for task in tasks %}
+    <div class="task {% if task.isCompleted %}completed{% endif %}">
+        <p>{{ task }}</p>
+        <div>
+            <a href="{% url 'todo-update' task.id %}">edit</a>
+            <a href="{% url 'todo-delete' task.id %}">delete</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
